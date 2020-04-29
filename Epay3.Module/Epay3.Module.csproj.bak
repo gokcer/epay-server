@@ -1,0 +1,379 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5F15837D-D1E5-44DC-92F0-4F2EBE9C3F8D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Epay3.Module</RootNamespace>
+    <AssemblyName>Epay3.Module</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'EasyTest|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\EasyTest\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EASYTEST</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\packages\AWSSDK.Core.3.3.101.11\lib\net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.SimpleNotificationService">
+      <HintPath>..\..\..\..\.nuget\packages\awssdk.simplenotificationservice\3.3.0.3\lib\netstandard1.3\AWSSDK.SimpleNotificationService.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Chart.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ConditionalAppearance.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Dashboards.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Objects.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotChart.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.PivotGrid.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.Xpo.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v19.1">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.1.Core">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Data.v19.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.v19.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v19.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.v19.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v19.1">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.1.Extensions, Version=19.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="RestSharp, Version=106.0.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.10.1\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessObjects\EDeviceMode.cs" />
+    <Compile Include="BusinessObjects\EOrderStatus.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\Bill.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\Calendar.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\Calendar.Designer.cs">
+      <DependentUpon>Calendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\CalendarDay.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\CalendarDay.Designer.cs">
+      <DependentUpon>CalendarDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\Card.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\Card.Designer.cs">
+      <DependentUpon>Card.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\Customer.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\Customer.Designer.cs">
+      <DependentUpon>Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\Device.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\Device.Designer.cs">
+      <DependentUpon>Device.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\DeviceLogin.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\DeviceLogin.Designer.cs">
+      <DependentUpon>DeviceLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\DeviceRegistration.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\DeviceRegistration.Designer.cs">
+      <DependentUpon>DeviceRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\Employee.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\Location.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\Location.Designer.cs">
+      <DependentUpon>Location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\LocationCard.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\LocationCard.Designer.cs">
+      <DependentUpon>LocationCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\NPCustomerMessage.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\NPCustomerMessage.Designer.cs">
+      <DependentUpon>NPCustomerMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\NPInvalidateCard.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\NPInvalidateCard.Designer.cs">
+      <DependentUpon>NPInvalidateCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\NPNewCharge.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\NPNewCharge.Designer.cs">
+      <DependentUpon>NPNewCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\NPNewDailyCharge.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\NPNewDailyCharge.Designer.cs">
+      <DependentUpon>NPNewDailyCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\Order.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\OrderDetail.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\OrderDetail.Designer.cs">
+      <DependentUpon>OrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\TransactionItem.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\TransactionItem.Designer.cs">
+      <DependentUpon>TransactionItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\RegistrationRequest.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\RegistrationRequest.Designer.cs">
+      <DependentUpon>RegistrationRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\Site.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\Site.Designer.cs">
+      <DependentUpon>Site.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\Station.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\Station.Designer.cs">
+      <DependentUpon>Station.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\StationItem.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\StationItem.Designer.cs">
+      <DependentUpon>StationItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\Transaction.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\Transaction.Designer.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\TransactionDetail.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\TransactionDetail.Designer.cs">
+      <DependentUpon>TransactionDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EpayDataModelCode\TransactionItemCategory.cs" />
+    <Compile Include="BusinessObjects\EpayDataModelCode\TransactionItemCategory.Designer.cs">
+      <DependentUpon>TransactionItemCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessObjects\EProductType.cs" />
+    <Compile Include="BusinessObjects\ETransactionType.cs" />
+    <Compile Include="BusinessObjects\EWeekDay.cs" />
+    <Compile Include="BusinessObjects\MyLogonParameters.cs" />
+    <Compile Include="Controllers\CalendarDayViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CalendarDayViewController.Designer.cs">
+      <DependentUpon>CalendarDayViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CardViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CardViewController.Designer.cs">
+      <DependentUpon>CardViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\CustomerViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\CustomerViewController.Designer.cs">
+      <DependentUpon>CustomerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\OrderDetailController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\OrderDetailController.Designer.cs">
+      <DependentUpon>OrderDetailController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SetupViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\SetupViewController.Designer.cs">
+      <DependentUpon>SetupViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\TransactionViewController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controllers\TransactionViewController.Designer.cs">
+      <DependentUpon>TransactionViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseUpdate\Updater.cs" />
+    <Compile Include="Epay3Module.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Epay3Module.Designer.cs">
+      <DependentUpon>Epay3Module.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\OneSignalService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controllers\CalendarDayViewController.resx">
+      <DependentUpon>CalendarDayViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\CardViewController.resx">
+      <DependentUpon>CardViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\CustomerViewController.resx">
+      <DependentUpon>CustomerViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\OrderDetailController.resx">
+      <DependentUpon>OrderDetailController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\SetupViewController.resx">
+      <DependentUpon>SetupViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controllers\TransactionViewController.resx">
+      <DependentUpon>TransactionViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
+    <EmbeddedResource Include="Epay3Module.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Epay3Module.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessObjects\EpayDataModel.xpo" />
+    <None Include="BusinessObjects\EpayDataModel.xpo.diagram">
+      <DependentUpon>EpayDataModel.xpo</DependentUpon>
+    </None>
+    <None Include="DatabaseUpdate\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BusinessObjects\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Controllers\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\sample.ets" />
+    <None Include="Images\ReadMe.txt" />
+    <EmbeddedResource Include="Model.DesignedDiffs.Localization.tr.xafml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FunctionalTests\config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\nfcpaylogo.jpg" />
+    <None Include="UnusableNodes_tr.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes1_tr.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes2_tr.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UnusableNodes3_tr.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Welcome.html" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

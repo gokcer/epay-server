@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Order">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Status" Caption="Durum" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization Id="Localization">
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="Epay3.Module.BusinessObjects.EOrderStatus">
+        <LocalizationItem Name="Seen" Value="Okundu" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+</Application>

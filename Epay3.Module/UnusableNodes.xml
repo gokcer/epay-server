@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel Id="BOModel">
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.OrderDetail">
+      <OwnMembers Id="OwnMembers">
+        <Member Name="Amount" EditMask="n" DisplayFormat="{0:0.##}" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+</Application>

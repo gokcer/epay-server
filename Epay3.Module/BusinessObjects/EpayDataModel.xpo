@@ -1,0 +1,867 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataBaseObjectModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="03db33a1-7afe-4d74-a960-c3a88bfb6829" namespace="Epay3.Module.BusinessObjects.EpayDataModel" dataBaseShemaInfo="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" generateStoredProcedures="false" fieldNameCase="Unchanged" generateDefaultConstructors="false" useNameOf="true" generateJsonSerializationContractResolver="false" generateServiceCollectionExtensions="false" lastModifiedInVersion="19.2.6.0" name="EpayDataModel" xmlns="http://schemas.microsoft.com/dsltools/ORMDataModel">
+  <classes>
+    <dataBaseObjectModelHasClasses Id="31d65de7-6591-42e4-95cd-7ce0f9df378e">
+      <xpObject Id="b671c20d-5481-4574-815f-e309ade03938" name="Transaction" baseClass="XPObject" userFileName="Transaction" designerFileName="Transaction.Designer" className="Transaction" deferredDeletion="False" virtualName="Transaction">
+        <fields>
+          <generalXpObjectHasFields Id="89f68062-f890-4247-86b2-ca3542b5b301">
+            <field Id="4c377203-33e4-4e66-967d-4e9918ef40ca" name="Date" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ad65f6cd-79c1-40c8-8c5b-4d8fa4e8af8e">
+            <field Id="3a25886f-74a2-4908-86d6-91a280648bed" name="ProvisionDate" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a3230493-8375-44e2-9713-b0da1b21dbbb">
+            <field Id="5a521cdb-814b-4b51-9533-1d5d96995028" name="Card" virtualColumnType="Card" logicalType="Card" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8c9a24e9-989f-4afe-9ca7-3a1c223b3178">
+            <field Id="84783e5c-86cc-4b25-a828-99cbb8d6504b" name="Amount" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="676b40ea-932d-4aef-af10-954e153a605f">
+            <field Id="da05d822-c624-49a8-8d5f-6e9f78678749" name="OldBalance" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b8074952-6ec5-4c2e-8706-9196dbb98214">
+            <field Id="44983016-385c-425c-a285-e3b2e6dfa728" name="NewBalance" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8034b107-4d26-4d53-8b77-54487f7aef54">
+            <field Id="f37b091a-0669-407b-9e86-575e4c45f39a" name="Cycle" columnType="Int32" virtualColumnType="Int32" memberDesignTimeVisibility="false" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ebbd0245-21ed-4aa3-8d45-8210e41c5687">
+            <field Id="ef24733e-52d1-4777-b2da-aa788db5dd45" name="DeviceLogin" virtualColumnType="DeviceLogin" logicalType="DeviceLogin" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="90fb143e-be7b-4c1b-bab8-ecb633fdefe7">
+            <field Id="daaad5c6-e69e-4660-ac0e-bdee51fbd550" name="Device" virtualColumnType="Device" logicalType="Device" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3374a552-b00a-4742-86d1-b8f5577c3c94">
+            <field Id="e32a7697-9b1f-4bd3-9465-1a2ddacaf0b9" name="Employee" virtualColumnType="Employee" logicalType="Employee" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="25aa5999-6a5a-4606-a7e8-5db4fba38897">
+            <field Id="ae1d4e5c-f512-4aff-ad88-13040e2c9324" name="SourceAddress" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="265b9596-a24d-4186-9afd-9f454c0bc0c0">
+            <field Id="951b51b9-cf3c-47cb-b636-e759074632fa" name="TotalCharges" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="222e18bf-678e-4b99-84e9-b41f599805fc">
+            <field Id="f0f7a7c4-fcf4-4599-9b68-67709d5af5c2" name="TotalSales" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="01594f42-e30e-4f8d-b1ad-40195ae781f1">
+            <field Id="588d2b2e-8904-4203-8c0b-2b036d61df17" name="ProductType" virtualColumnType="Epay3.Module.BusinessObjects.EProductType" logicalType="Epay3.Module.BusinessObjects.EProductType" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4e29d8b5-27ff-4fff-ac6e-a4f317ba7d33">
+            <field Id="f90009c9-8ba4-4d6d-a446-a06569d2bf14" name="IsCancel" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="ba84abfa-0ea1-4cb0-8a45-e7fdec624437">
+            <field Id="744929dc-15c9-400b-9a62-5518e294bdf0" name="DateEffective" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false)" />
+          </generalXpObjectHasFields>
+        </fields>
+        <aggrTarget>
+          <aggregation Id="42b2eafb-6b9d-4bd1-b0b0-4328cb3b0748" sourceCollectionName="TransactionDetails" name="TransactionDetailReferencesTransaction" targetFieldName="Transaction">
+            <xpObjectMoniker Id="0e117c5f-e512-4baa-9e84-082303b3973a" />
+          </aggregation>
+        </aggrTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="da4eb94e-87a8-470c-ad8e-b27c4fae87a0">
+            <collectionField Id="a4bfcf7b-bdc5-4b83-8b9c-a184dd77af8e" name="TransactionDetails" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="e438998d-93f3-455b-86dc-255491c7a09f">
+      <xpObject Id="6ff1266c-342d-4c5d-b2f9-164599d90646" name="Card" baseClass="XPObject" userFileName="Card" designerFileName="Card.Designer" className="Card" deferredDeletion="False" virtualName="Card">
+        <fields>
+          <generalXpObjectHasFields Id="e037e644-363c-4c7b-9ba3-e9cfc4b9fb0e">
+            <field Id="814a1c41-3550-45b0-8f89-75984ff716e9" name="CardNo" virtualColumnType="String" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Validation.RuleUniqueValue,Indexed(Unique = true)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="04718507-be31-4fa8-bdf6-c9b75bd6aa86">
+            <field Id="9da97207-1af5-4abd-916a-bb2743c536ef" name="Active" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="64679715-7174-41a8-87a0-82b578aaf5f7">
+            <field Id="a5532a24-9a43-4df0-983e-5bf3c07eae40" name="Customer" virtualColumnType="Customer" logicalType="Customer" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="74c01f74-2c72-4c5d-9864-bbaeeefe3a85">
+            <field Id="7fac822c-4d69-41f2-9bf1-8e3dca2790e6" name="MinimumBalanceLimit" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" isNullable="true" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2975a6ea-7947-43ba-8e12-928ddbb2c2cc">
+            <field Id="1d5165a9-0248-4b24-a34f-6e764377868e" name="Returnable" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="59efbb7a-b8a2-4633-8b81-2fd79d8c7731" sourceCollectionName="Transactions" name="TransactionReferencesCard" targetFieldName="Card">
+            <xpObjectMoniker Id="b671c20d-5481-4574-815f-e309ade03938" />
+          </simpleAssociation>
+          <simpleAssociation Id="cd1c6d71-1904-4965-b424-6250efc8ee40" sourceCollectionName="LocationCards" name="LocationCardReferencesCard" targetFieldName="Card">
+            <xpObjectMoniker Id="9d9b37b9-5849-4ba8-badd-c21cdf2f1d5b" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="245a8688-b034-459e-938a-05e9f7571bd7">
+            <collectionField Id="b7783f1a-8cde-426d-a582-46f7a6c7ec79" name="Transactions" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="3ff26ee0-ad75-454a-9a67-1a18aca6724f">
+            <collectionField Id="58b50ff9-8de5-4a4d-97e0-f56e43d9cfa9" name="LocationCards" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="d871e0e8-f309-4e11-b86d-97621d0bd5a3">
+      <xpObject Id="ac0083e6-ac4b-4336-acb5-8df9a73508b2" name="Customer" baseClass="XPObject" userFileName="Customer" designerFileName="Customer.Designer" className="Customer" deferredDeletion="False" virtualName="Customer">
+        <fields>
+          <generalXpObjectHasFields Id="894bbc15-1e0c-48be-b622-cc6e6b566e7c">
+            <field Id="19b1e72c-9dfb-4649-b98d-60fc7d22142d" name="Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9174468c-50a9-46d5-bbc9-45b1fcb4ed35">
+            <field Id="45debf84-c3dc-4970-8bc9-7e113a80b2e7" name="CitizenshipNumber" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e695a7d5-ab56-473c-8d63-11782510f510">
+            <field Id="578cee5b-ffe3-4af8-96ff-4261fcb42d24" name="Phone" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="53b12ba5-4682-4fa5-9b71-8db9b8013f90">
+            <field Id="e8f8836b-f642-423b-bd89-ba58223411ea" name="UserName" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="dd2ce59d-9c5f-4b56-a460-0bbb8035f238">
+            <field Id="84bd18c3-79c8-40dd-936b-748e0961d177" name="Password" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="54b2e59c-a87b-4dc8-b8b4-fc91321ac19b">
+            <field Id="20443afe-6bc5-4ae7-a53a-79638e2d726c" name="Email" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a07da6f9-4fcd-46dd-bb40-fb3ee343b6b4">
+            <field Id="da4d4e08-3124-4cec-8ffe-d359df8ee919" name="Token" virtualColumnType="String" memberDesignTimeVisibility="false" delayedUpdateModifiedOnly="false" size="1000" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fa60a5e0-d568-49a7-b346-4ce4890e06be">
+            <field Id="68872119-f69d-4262-84ee-82b2d5deff81" name="Team" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="efed6e12-00ff-44db-9282-b66d0d168850">
+            <field Id="7dbb45b2-4603-40b7-949d-57e18246b2f0" name="NotificationToken" virtualColumnType="String" memberDesignTimeVisibility="false" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false)" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="52fd9f5f-6385-4ff9-8e9a-c85bc8034ab7" sourceCollectionName="Cards" name="CardReferencesCustomer" targetFieldName="Customer">
+            <xpObjectMoniker Id="6ff1266c-342d-4c5d-b2f9-164599d90646" />
+          </simpleAssociation>
+          <simpleAssociation Id="da0d3386-9ce1-4370-92f3-ea3ce773761a" sourceCollectionName="Orders" name="OrderReferencesCustomer" targetFieldName="Customer">
+            <xpObjectMoniker Id="d3c55eef-2b17-4638-87b9-5f618bc9070f" />
+          </simpleAssociation>
+          <simpleAssociation Id="bfefde0a-6bbd-4506-af38-63793c60903d" sourceCollectionName="RegistrationRequests" name="RegistrationRequestReferencesCustomer" targetFieldName="Customer">
+            <xpObjectMoniker Id="67fbf20a-52ff-490b-bd60-bd3b97ab6bad" />
+          </simpleAssociation>
+          <simpleAssociation Id="c09df2a2-5adc-4c1b-a27a-3cbd3b1c5e57" sourceCollectionName="ItemPermissions" name="ItemPermissionReferencesCustomer" targetFieldName="Customer">
+            <xpObjectMoniker Id="d48dd812-4a24-4b70-83b1-c96cbec3ad78" />
+          </simpleAssociation>
+          <simpleAssociation Id="664df523-78ec-496d-969a-2466399eb8fc" sourceCollectionName="Messages" name="MessageReferencesCustomer" targetFieldName="To">
+            <xpObjectMoniker Id="d10809a3-f42e-4f1b-aec8-6602a4822a93" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="868bd88e-bbff-44c9-a992-cbdc96821255">
+            <collectionField Id="40a3d4e6-ef1d-46d3-bad3-31972111cc83" name="Cards" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="7bdd2bcf-5880-4fd6-9427-36b8a8742017">
+            <collectionField Id="49939b1a-55e2-4aa9-a83a-2a6282b7499b" name="Orders" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="9f27ce2d-d16b-493a-a0ba-64510495d33f">
+            <collectionField Id="07427d8b-b0da-4303-acf8-4f4db7fa5aed" name="RegistrationRequests" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="cd405899-7f63-4abb-8aac-78ccd7746bd8">
+            <collectionField Id="1bc41c71-085e-4e17-9b44-77fa6f0b5fde" name="ItemPermissions" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="fad21fbd-c4c9-4ed7-a4a3-2635cf5b3775">
+            <collectionField Id="e7d19250-2b1b-41f6-b009-06c93efcd955" name="Messages" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="8048ec9e-fe57-40d8-8d8f-fb340384a0cf">
+      <xpObject Id="c9508a77-d7ca-4625-a00a-42bad0a3eb19" name="Bill" baseClass="XPObject" userFileName="Bill" designerFileName="Bill.Designer" className="Bill" deferredDeletion="False" virtualName="Bill">
+        <fields>
+          <generalXpObjectHasFields Id="419dcc91-856b-4a5a-a13e-71e21b9cfed8">
+            <field Id="9da63cc1-6d60-4b4d-a4c3-8b1ef4e7afef" name="Year" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="30e5b632-2bf2-4a1c-8fd6-a4e9555fbc61">
+            <field Id="996d2518-092d-4afc-89ef-c05fe3e8777c" name="Month" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="64e77380-6bce-4d7d-9f7e-0f5c39417c4a">
+            <field Id="0d7212b5-0a4d-4c00-a12a-02fa4da895a1" name="Amount" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6937d931-eeef-4a2b-b8df-38ab3865a05a">
+            <field Id="393e1e4c-8591-44de-b08f-2e263dfcdaf1" name="DueDate" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e55855d7-891a-4bc9-978c-42375eac2167">
+            <field Id="76bef680-5719-49a8-afff-04df07b9fd2e" name="PaymentDate" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="5d63d4e2-96f2-4ad9-abe6-64a077d9d9f1">
+      <xpObject Id="1575375c-dd96-4b0f-bd9b-c3f3fd0972e5" name="Device" baseClass="XPObject" userFileName="Device" designerFileName="Device.Designer" className="Device" deferredDeletion="False" virtualName="Device">
+        <fields>
+          <generalXpObjectHasFields Id="e7835116-d929-48fe-b06f-d28cf7840ecb">
+            <field Id="e0aad7dc-5ce0-48f7-8758-300b073bbc6f" name="Serial" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e5c23d47-0a2e-4585-80c4-74325e6b06fe">
+            <field Id="c8ede5c3-2dbc-4461-960e-b9780cba9ca3" name="DeviceToken" virtualColumnType="String" memberDesignTimeVisibility="false" delayedUpdateModifiedOnly="false" readOnly="true" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1680b5f5-52a1-493c-a13c-9ab14aa15884">
+            <field Id="4dd4e92a-4dd3-476f-b8f0-88b57d8a6848" name="DeviceMode" columnType="Boolean" virtualColumnType="Epay3.Module.BusinessObjects.EDeviceMode" logicalType="Epay3.Module.BusinessObjects.EDeviceMode" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d581e114-37bd-497e-93cb-31db69c244d8">
+            <field Id="e2fe4f30-b90c-4a92-b405-b1d325f11a8b" name="ProductType" virtualColumnType="Epay3.Module.BusinessObjects.EProductType" logicalType="Epay3.Module.BusinessObjects.EProductType" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="98e2710a-7d51-44e4-9953-f18c4802e3a9">
+            <field Id="c21c218c-c6ac-485c-9fb2-62f4c2c15d1c" name="PollPeriod" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="35b8c4f1-97ff-44c1-9a3d-9e880c622192">
+            <field Id="d8a0bc4f-d3ca-4362-8461-300d0723d178" name="MaskOrderCustomer" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a0fcf40a-2a97-475a-a6b7-e187035c87ca">
+            <field Id="869e1899-6f7c-40d4-8c15-228cf8091419" name="KioskMode" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9291ae36-7b10-4d8f-9d3b-6d91273b2f96">
+            <field Id="b56d2e1a-2f69-456e-8d4b-34e670b6475b" name="CompletedOrderKeepDuration" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="34fa845d-650d-4dc4-b2eb-b3415c0317d0" sourceCollectionName="Transactions" name="TransactionReferencesDevice" targetFieldName="Device">
+            <xpObjectMoniker Id="b671c20d-5481-4574-815f-e309ade03938" />
+          </simpleAssociation>
+          <simpleAssociation Id="f84811e9-10ca-4dc8-b634-e3d95dabbb6e" sourceCollectionName="DeviceLogins" name="DeviceLoginReferencesDevice" targetFieldName="Device">
+            <xpObjectMoniker Id="3e83176d-1342-416e-a6b4-44dd39839783" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="a7f92165-0976-4643-b9d7-18d6910cff67">
+            <collectionField Id="e8128764-191c-4b18-8c5c-8bbfbcc32627" name="Transactions" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="e6406f98-3228-47dc-8d5f-7c34a5d2ac03">
+            <collectionField Id="b74284cf-5f8a-437a-af78-60eb46c920af" name="DeviceLogins" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="af75985b-96f2-4d3a-98ab-1a72fa48fac7">
+      <xpObject Id="ae968547-dce2-4e25-8764-8ecca8632340" name="Employee" baseClass="Customer" userFileName="Employee" designerFileName="Employee.Designer" className="Employee" virtualBaseClass="Customer" deferredDeletion="False" mapInheritance="ParentTable" virtualName="Employee">
+        <fields>
+          <generalXpObjectHasFields Id="1a5e5e1f-ebb1-49cd-83fc-a83caa6e5cdf">
+            <field Id="93185fb0-9c9c-4ab4-949d-9554919cbae1" name="Active" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fb3b1be2-0838-4932-a1c6-e698334cfe2b">
+            <field Id="bf3ea491-9be9-448f-91b2-1d73211bae9b" name="CanCharge" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8211a15f-1d21-460c-82a6-c49df95ee01d">
+            <field Id="9827e3a9-f240-492f-946b-805e98622358" name="CanSale" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="226670f6-9704-47a3-8b45-85ca4ebb642a">
+            <field Id="4d89e9ba-43cf-4078-a905-45c3abe64e14" name="CanManageTable" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1057d5a6-45ca-49cf-a789-1f65e8ec2170">
+            <field Id="2ed2c203-c764-46b4-9036-9834c9440fc9" name="CanResetOrder" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="580a3cc9-7ef7-416f-b945-be123c7c4629">
+            <field Id="371f66b7-8e5c-433b-b2c6-b725bd30733b" name="CanCancelOrder" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2c0dca92-64ea-4551-ba86-58f12e692897">
+            <field Id="25f1f84e-87f0-47b7-8c33-058fc3e59f1e" name="CanCompleteOrder" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a1a58f5f-687a-405c-b8a2-b6e062b1ea53">
+            <field Id="ff0546dc-f682-4d4e-bee9-c41ccd6cce02" name="CanStartOrder" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <superClass>
+          <inheritance Id="ccd0b108-af3d-4a9e-8ec6-b2b7f234854d">
+            <xpObjectMoniker Id="ac0083e6-ac4b-4336-acb5-8df9a73508b2" />
+          </inheritance>
+        </superClass>
+        <saTargets>
+          <simpleAssociation Id="49a5431f-67a9-46b0-b4aa-6e601d621a80" sourceCollectionName="Transactions" name="TransactionReferencesEmployee" targetFieldName="Employee">
+            <xpObjectMoniker Id="b671c20d-5481-4574-815f-e309ade03938" />
+          </simpleAssociation>
+          <simpleAssociation Id="dff4a2c4-d672-467a-bf76-dbb53a267636" sourceCollectionName="DeviceLogins" name="DeviceLoginReferencesEmployee" targetFieldName="Employee">
+            <xpObjectMoniker Id="3e83176d-1342-416e-a6b4-44dd39839783" />
+          </simpleAssociation>
+          <simpleAssociation Id="a7bc64ce-6766-4094-a481-983435c86b93" sourceCollectionName="LocationCards" name="LocationCardReferencesEmployee" targetFieldName="OpenedBy">
+            <xpObjectMoniker Id="9d9b37b9-5849-4ba8-badd-c21cdf2f1d5b" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="3b1cdbe1-0073-4ea6-9760-484b2a2cf82e">
+            <collectionField Id="f0270ae2-067f-42c9-8af2-29c2e4a167b9" name="Transactions" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="5b11b264-6f5e-4ff1-b73b-2f9e79034385">
+            <collectionField Id="e8984105-1012-4910-93a8-36518d089197" name="DeviceLogins" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="e050c424-78bd-411f-91f3-61366954af33">
+            <collectionField Id="6aed56c1-92c3-4644-911d-557710bfa6ee" name="LocationCards" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="119657cb-a52e-4d54-991b-2d64ac0b9172">
+      <xpObject Id="3e83176d-1342-416e-a6b4-44dd39839783" name="DeviceLogin" baseClass="XPObject" userFileName="DeviceLogin" designerFileName="DeviceLogin.Designer" className="DeviceLogin" deferredDeletion="False" virtualName="DeviceLogin">
+        <fields>
+          <generalXpObjectHasFields Id="e269932a-b87e-4ae2-a777-61fdd3bacb09">
+            <field Id="9ed19795-8f73-49f9-bd43-c725bdc6ae72" name="Date" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4576eaa6-c951-4ce6-97d8-4eaa8c874fb2">
+            <field Id="6fa0b3c1-0279-4986-aafb-d8a74c911dda" name="Serial" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="5fe0ac70-a72d-4d15-b705-3a228583b2d3">
+            <field Id="7572815c-e7b2-46b7-bd1b-47b768bce43c" name="SourceAddress" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1850d355-0266-45bc-b700-5529cde6a0be">
+            <field Id="004974f6-2e63-4a1f-877c-919fdba71ac5" name="UserNameReceived" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="87a3453a-a02a-44fa-bcd4-dcf19c3c3c86">
+            <field Id="5246da7b-ba2f-4ede-bd58-a8086a89b05e" name="PasswordReceived" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="053be77b-b76d-41e0-88ff-dca6d1d46f31">
+            <field Id="41a17b04-5117-4459-9c97-240f331b57e8" name="Success" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4e62fd2d-f6f4-4057-94e3-d229d9b2d579">
+            <field Id="2c3ad2ef-eb6c-458f-aa74-b7e40929f7d4" name="Employee" virtualColumnType="Employee" logicalType="Employee" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f0c9f32a-434f-4004-a957-12b92afd8365">
+            <field Id="9934237d-7584-41d5-8176-6333d27df640" name="Device" virtualColumnType="Device" logicalType="Device" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="21742ad1-501d-44ea-98a3-a1a172312972">
+            <field Id="db1f7571-bb63-4ac9-adc3-b72ca15379b3" name="Token" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="f7a021d8-25e5-447b-98a5-4e9d2587ba09" sourceCollectionName="Transactions" name="TransactionReferencesDeviceLogin" targetFieldName="DeviceLogin">
+            <xpObjectMoniker Id="b671c20d-5481-4574-815f-e309ade03938" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="21ffcf6e-89aa-45ea-b8b5-7f4e513eb7b5">
+            <collectionField Id="3feee4b6-7181-41aa-a999-ee1e1899c295" name="Transactions" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="de8da523-58ff-4e1b-8f92-5dd72adf2d87">
+      <xpObject Id="47b81843-3e09-49c8-b1aa-e11fafd6e530" name="Site" baseClass="XPObject" userFileName="Site" designerFileName="Site.Designer" className="Site" deferredDeletion="False" virtualName="Site">
+        <fields>
+          <generalXpObjectHasFields Id="6085e05e-3cbc-4dca-a2c9-70f89278930f">
+            <field Id="64e731f8-94d7-4f91-99ab-02d7778d01bf" name="Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f6821710-434c-4cab-9ccd-d5d5fffd8892">
+            <field Id="eacf8a45-26f5-41af-9fb3-4f96d3bbb9e6" name="Slot" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2fc96b70-920e-400b-a627-15611f14fc69">
+            <field Id="6c3d1a10-a969-4fcd-a823-1ac0da15e6fe" name="RegistrationCode" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="437288b2-2517-4db9-a016-3134502637cf">
+            <field Id="da99b139-89a6-4161-bf39-50cd2ce8c922" name="OrderCooldownTime" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="09383190-e324-45d3-b5c5-f21f71eb07a9">
+            <field Id="8acacef2-e6d8-402f-8557-4df4a67bb119" name="MinimumBalanceLimit" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e65bb165-c3d2-4dcf-b47a-cd94fecc2b2e">
+            <field Id="294861b4-c729-4f19-bba3-7188d0a9969d" name="FeatureCustomerMenu" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="5fbcd680-99a5-401e-a436-571c7d7a3a4c">
+            <field Id="c8030fe1-6c63-4350-ae28-c32ed8c55148" name="FeatureLoginWithCard" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1b1890d9-a4eb-47ef-90fe-11bbfb523da7">
+            <field Id="bb900750-d90f-4f43-92a8-cb2aa95a71d9" name="FeatureCustomerPortal" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d240b5d8-c513-4d14-b462-ccd936977c69">
+            <field Id="edd515a6-ecf8-4128-ba49-5838e805dbce" name="FeatureKiosk" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="baf79f9c-3799-4042-b730-6491daf4db2f">
+            <field Id="9729daf3-7ad2-4b11-840c-742c0888a874" name="FeatureChargeOnline" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="49d814a3-7ae2-4320-9b95-c1f154980791">
+            <field Id="44e1f894-bc57-46ea-aea2-e22e8fb4d76d" name="FeatureCardBalanceTransfer" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d207d33a-e32e-4eac-8b52-7e26c1c4c795">
+            <field Id="1e5209ea-ce6c-482a-b691-2ac11c610317" name="FeatureShopList" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a5261ab1-b79c-48bb-919d-e5ee332dcbc6">
+            <field Id="d22d1b01-89d4-43f1-9c3a-bae0a73c820f" name="TransactionFee" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8cc100f4-9751-4e94-8c3f-2e4432dac108">
+            <field Id="49846ad2-03f1-4025-9c61-a8fffa57b87e" name="TransactionMonthlyLimit" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2697e95d-4306-4d45-8ebe-107fb9905f8c">
+            <field Id="f4cb829e-50cf-4b49-9104-09bfc3fe4ac2" name="Timezone" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9a48e616-71a8-4509-bdcd-df6cde5b0502">
+            <field Id="a1febbb2-9cad-48ba-b3ce-58279d356942" name="Latitude" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d8deee13-82ec-4140-a0a3-85846b52fe43">
+            <field Id="e2411c0d-3c07-4187-a117-9ed9c29eb47b" name="Longitude" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a6f618f1-d6a3-4980-87be-caa96107f737">
+            <field Id="d1074cb6-27aa-42f3-8fd7-b459745cb2a5" name="RadiusMeter" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f0101150-dd97-4d40-9041-76c049b9f1fe">
+            <field Id="7345c212-a078-4641-bcd5-465be7cc1cd8" name="CustomerProvisionTime" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6a4fd6e2-2f4a-41e5-8dad-e57a669da953">
+            <field Id="720ca588-838d-40cd-af19-38c1e3c468de" name="WaitressProvisionTime" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2d0c8b1c-487c-47ca-a181-f5f1aa013ac3">
+            <field Id="7e4f9681-ee27-4d85-becd-f9a67cfe134c" name="NotifyCustomerForTransaction" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b49bdf82-5e5c-4fb2-9778-98e77401997f">
+            <field Id="f7856049-71a7-4c51-b220-51c11b9333d4" name="EnableRemoteOrders" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="c2a095ca-4f84-4823-8b35-a8390d5cfd0d">
+            <field Id="9759495e-39d8-4acd-99f2-912eca081b8c" name="EnableLocationOrders" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="b1791fa1-ffe7-4a40-9b43-1e66c0016742">
+      <xpObject Id="0e117c5f-e512-4baa-9e84-082303b3973a" name="TransactionDetail" baseClass="XPObject" userFileName="TransactionDetail" designerFileName="TransactionDetail.Designer" className="TransactionDetail" deferredDeletion="False" virtualName="TransactionDetail">
+        <fields>
+          <generalXpObjectHasFields Id="0aadaa49-b896-44d0-bbfe-027b1b460708">
+            <field Id="39d4ea37-cb30-48f8-8843-bf7886724f5d" name="Transaction" columnType="TimeSpan" virtualColumnType="Transaction" logicalType="Transaction" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="19112871-8bfe-41c9-bc07-cb60027c6379">
+            <field Id="52b3f568-8c44-471c-b68f-dd97ab6a21f6" name="Item" virtualColumnType="TransactionItem" logicalType="TransactionItem" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="51e1c712-5ecc-4088-84cd-9ca4581dad86">
+            <field Id="f0919f8c-885b-487f-b627-c368be093c25" name="Quantity" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7749b941-b496-4b79-ba27-023b0322107b">
+            <field Id="71194bdc-a466-48c0-a9f1-2ebc748ffcdb" name="Total" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3db7d234-8ee8-4922-8079-d081e9bfb6a3">
+            <field Id="30589b82-9e40-4c17-bf81-fc598814ed90" name="ValidFrom" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" isNullable="true" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="0c6c81fa-d464-4d48-bee2-f5781367799b">
+            <field Id="69b302e6-9215-43f9-90aa-62cae6b8e797" name="ValidTo" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" isNullable="true" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="80b08bd1-ff2e-4abb-876b-cdf3ff77c218">
+            <field Id="b634392e-3cc0-4279-b861-d91ca77473bc" name="IsCancel" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="f1d4eaf4-8a3f-407e-9a8b-cc4cb2138697">
+      <xpObject Id="b2faacd3-2ae3-40da-a94c-ea42b83a69b3" name="TransactionItem" baseClass="XPObject" userFileName="TransactionItem" designerFileName="TransactionItem.Designer" className="TransactionItem" deferredDeletion="False" virtualName="TransactionItem">
+        <fields>
+          <generalXpObjectHasFields Id="08800fde-6ec3-413f-a90f-57fe1713cc91">
+            <field Id="4c4a55c7-efb5-4aa9-b147-ac6c9dfa152f" name="Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="19a575f9-e357-438f-8683-ed109f7d1fff">
+            <field Id="31a37858-f76c-4b0c-a5d8-a0551b411a0f" name="Price" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="0596fcf9-db8e-40ee-bf90-46a8d5ffdca1">
+            <field Id="d5b00fb0-d666-47bd-b9ea-a0e5f186f922" name="Type" virtualColumnType="Epay3.Module.BusinessObjects.ETransactionType" logicalType="Epay3.Module.BusinessObjects.ETransactionType" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="99e1ed3e-8836-45f7-a420-c430a69dfb75">
+            <field Id="1a147095-1dc8-4785-b257-4dcb34ebb9c2" name="Active" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7711600b-3944-4eca-93aa-9a56d605f7f7">
+            <field Id="462012a8-fe36-4957-91b9-c80b43f0d48f" name="System" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="1963e927-c07a-46c5-ada1-8229ef6cb158">
+            <field Id="feb2b0ae-d5f1-4d08-8b83-aa0f90b97984" name="ProductType" virtualColumnType="Epay3.Module.BusinessObjects.EProductType" logicalType="Epay3.Module.BusinessObjects.EProductType" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d5cff7de-ac5c-458f-823e-e5f571c74fe8">
+            <field Id="1fe6cf63-b114-4940-a8e8-f6b376bb7380" name="SpecialCode" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="27928e38-7e9c-42d8-9992-d15af375f15b">
+            <field Id="db98af2d-139e-4f21-8d9e-cc4bc46f66dd" name="Category" virtualColumnType="TransactionItemCategory" logicalType="TransactionItemCategory" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="96179e33-bf1b-4de1-8ac5-1097091f4602" sourceCollectionName="TransactionDetails" name="TransactionDetailReferencesProduct" targetFieldName="Item">
+            <xpObjectMoniker Id="0e117c5f-e512-4baa-9e84-082303b3973a" />
+          </simpleAssociation>
+          <simpleAssociation Id="ace632ed-e567-46e4-a21a-76a0962c31c2" sourceCollectionName="OrderDetails" name="OrderDetailReferencesTransactionItem" targetFieldName="TransactionItem">
+            <xpObjectMoniker Id="838a91ff-18e3-4b5a-9dcf-f3b92fc4f70c" />
+          </simpleAssociation>
+          <simpleAssociation Id="7b117ccc-6d58-4f55-a0b0-5df9f284c33c" sourceCollectionName="ItemPermissions" name="ItemPermissionReferencesTransactionItem" targetFieldName="TransactionItem">
+            <xpObjectMoniker Id="d48dd812-4a24-4b70-83b1-c96cbec3ad78" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="9e9c84ce-d685-4125-85e8-7a42d6c3186d">
+            <collectionField Id="c4ffd711-d131-4069-92e2-0894fd627052" name="TransactionDetails" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="8d3a555a-6ea0-46fc-941c-814d913ed0df">
+            <collectionField Id="c33b8033-7c8e-4bf1-8c75-8d2faee6c135" name="OrderDetails" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="b0dc9121-869e-431a-ac49-ea4c7db860a2">
+            <collectionField Id="fdb76d3e-6964-409c-8d65-7e443dcfe514" name="ItemPermissions" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="d375c6ea-e897-413f-af6b-e4b5fbbb1132">
+      <xpObject Id="d3c55eef-2b17-4638-87b9-5f618bc9070f" name="Order" baseClass="XPObject" userFileName="Order" designerFileName="Order.Designer" className="Order" deferredDeletion="False" virtualName="Order">
+        <fields>
+          <generalXpObjectHasFields Id="44e91c9f-bd2b-4302-ae81-01f60064e812">
+            <field Id="a523bb06-0130-4e93-b714-6f729c500861" name="Date" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4b7140f6-30b6-4385-beea-fb9afaa4d522">
+            <field Id="15091205-06c6-439a-b89c-334076267443" name="Customer" virtualColumnType="Customer" logicalType="Customer" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3851607a-db22-4302-bda6-3cd311dc59a0">
+            <field Id="75a79a8d-5136-4492-84e0-5f961d347b98" name="Status" virtualColumnType="Epay3.Module.BusinessObjects.EOrderStatus" logicalType="Epay3.Module.BusinessObjects.EOrderStatus" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4057b2cd-ee03-4b40-81e6-de76429a49f4">
+            <field Id="29a63785-cc33-4074-8024-d170f48a695a" name="Transaction" columnType="TimeSpan" virtualColumnType="Transaction" logicalType="Transaction" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d19b0cee-3005-4646-b3d4-ac5004bd92c5">
+            <field Id="2d07304f-a550-4aa8-932f-21a4ab8c21d5" name="Type" virtualColumnType="Epay3.Module.BusinessObjects.EOrderType" logicalType="Epay3.Module.BusinessObjects.EOrderType" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="80e67cc7-12fa-4518-9408-b385ec87eb75">
+            <field Id="5f3309f4-7cad-4310-8c0d-991d26f94c57" name="LocationCard" virtualColumnType="LocationCard" logicalType="LocationCard" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="49e5b163-6741-4704-8fd8-f6abfd43b85c" sourceCollectionName="OrderDetails" name="OrderDetailReferencesOrder" targetFieldName="Order">
+            <xpObjectMoniker Id="838a91ff-18e3-4b5a-9dcf-f3b92fc4f70c" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="a628d386-cad3-4a1d-b700-f039295a6e8a">
+            <collectionField Id="e842087a-0390-40f9-b649-8289f8b60ad4" name="OrderDetails" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="d252028f-0a72-4825-93f2-b5c917d8a654">
+      <xpObject Id="838a91ff-18e3-4b5a-9dcf-f3b92fc4f70c" name="OrderDetail" baseClass="XPObject" userFileName="OrderDetail" designerFileName="OrderDetail.Designer" className="OrderDetail" deferredDeletion="False" virtualName="OrderDetail">
+        <fields>
+          <generalXpObjectHasFields Id="61bd29b1-28bd-4726-95fd-f0cbf35ec330">
+            <field Id="e69c07ef-bb46-4af3-ba7d-42b782e2f09a" name="Order" virtualColumnType="Order" logicalType="Order" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4b1b788f-c66b-41b6-be2c-53bb8526c3b4">
+            <field Id="d0f8e098-c574-4367-a217-d90d1ad53958" name="TransactionItem" virtualColumnType="TransactionItem" logicalType="TransactionItem" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8b0d4ae2-bced-4b80-8189-1716e5ef1e91">
+            <field Id="9a1e6d47-ac5a-4f3d-ba81-00d307677dbc" name="TransactionDetail" columnType="TimeSpan" virtualColumnType="TransactionDetail" logicalType="TransactionDetail" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f93eeb0c-9394-4c14-b465-f21a6356c68c">
+            <field Id="c0047363-82d4-423f-8d9b-33467cf7c27a" name="CancelTransactionDetail" columnType="TimeSpan" virtualColumnType="TransactionDetail" logicalType="TransactionDetail" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.Persistent.Base.VisibleInListView(false), DevExpress.Persistent.Base.VisibleInDetailView(false)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="51a17e92-6a24-42bf-ad8a-c9192f5ea76a">
+            <field Id="2b1af4f4-2ad4-4480-85ac-1a75c60de7a9" name="Quantity" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fe44f114-9542-46a4-bbd8-ef4fbee160dd">
+            <field Id="0d71b26a-3923-4a87-a22b-af541c32bd41" name="Station" virtualColumnType="Station" logicalType="Station" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f361d0ce-ba22-4189-acc1-b6eee4a60f86">
+            <field Id="8ffa5c0a-134d-4193-853a-d8062b60b7af" name="Status" virtualColumnType="Epay3.Module.BusinessObjects.EOrderStatus" logicalType="Epay3.Module.BusinessObjects.EOrderStatus" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="6eb4117d-0c90-42c0-87bf-5c02660de065">
+      <xpObject Id="c8b3db8b-a9ad-4f85-a49f-0cc803c7ab96" name="NPNewCharge" baseClass="XPObject" userFileName="NPNewCharge" designerFileName="NPNewCharge.Designer" className="NPNewCharge" nonPersistent="true" virtualName="NPNewCharge">
+        <fields>
+          <generalXpObjectHasFields Id="3bd5e2d6-f3fe-4ff0-9690-264bf1fa0f8c">
+            <field Id="4e746567-2701-4798-ae14-11f6e19ebbd1" name="Item" virtualColumnType="TransactionItem" logicalType="TransactionItem" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d991cb00-26fe-48f0-b4c3-3077094f52dc">
+            <field Id="938995b6-3d5f-447f-b849-f652b802c02d" name="Start" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2b87dd98-ad5c-4881-8ca1-587eb2a7f5a4">
+            <field Id="5e6fd7c3-1065-4458-a6c6-59da5eddc044" name="End" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b6f6cd7f-8e0f-436f-8323-321c8a9f8abe">
+            <field Id="90f7b9d6-84a5-4bbe-97dc-f2007160755e" name="Quantity" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="7fb6fccc-41ec-4149-9b54-2c80f2a73f45">
+      <xpObject Id="0f4d24ac-8328-4026-8da1-c86507b234d4" name="NPNewDailyCharge" baseClass="XPObject" userFileName="NPNewDailyCharge" designerFileName="NPNewDailyCharge.Designer" className="NPNewDailyCharge" nonPersistent="true" virtualName="NPNewDailyCharge">
+        <fields>
+          <generalXpObjectHasFields Id="ac7ab4dd-64f0-4cbe-ba93-5868a4c277b2">
+            <field Id="f8c4bf54-f406-41bc-84e9-46ce943c8768" name="Item" virtualColumnType="TransactionItem" logicalType="TransactionItem" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="fbea3d0c-ad4b-4e04-86d3-24ad9adf88cb">
+            <field Id="127227d6-f41d-41e9-ae26-0d2ff7cb2e5b" name="Quantity" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="13531a89-bd79-4fbd-87fc-fc56609bbdda">
+            <field Id="1f1d6da7-d700-4c75-99f4-cb568cf599dd" name="Calendar" virtualColumnType="Calendar" logicalType="Calendar" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="7884d78b-b37f-47ce-a3c3-258a1e4622c6">
+      <xpObject Id="ecd6d087-15e4-4d25-8ba8-07d66597b1a8" name="Calendar" baseClass="XPObject" userFileName="Calendar" designerFileName="Calendar.Designer" className="Calendar" deferredDeletion="False" virtualName="Calendar">
+        <fields>
+          <generalXpObjectHasFields Id="216ea1d5-142d-4df7-98cb-e1d9999ed972">
+            <field Id="9ad38d4a-3435-47ab-a507-2c5b51da0b5f" name="Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="b61ee54a-dd24-4dcb-8159-c850ccca9255">
+            <field Id="653d6402-b726-4305-9e37-ab5bba0207fa" name="Active" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <mMTarget>
+          <manyToManyRelationship Id="1cd7b0e1-c86f-4b7b-a583-bd744819fa7b" sourceCollectionName="CalendarDays" name="CalendarDayReferencesCalendar" targetCollectionName="Calendars">
+            <xpObjectMoniker Id="09325aa3-6ff6-4761-95c8-3b39564ec918" />
+          </manyToManyRelationship>
+        </mMTarget>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="fcb00e42-cf18-4ffe-8b59-933338422d2a">
+            <collectionField Id="8bb11f30-276c-45ac-8ef9-8e4f15f39f9c" name="CalendarDays" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="251a36cf-6da5-485c-9301-7cb15b91668d">
+      <xpObject Id="09325aa3-6ff6-4761-95c8-3b39564ec918" name="CalendarDay" baseClass="XPObject" userFileName="CalendarDay" designerFileName="CalendarDay.Designer" className="CalendarDay" deferredDeletion="False" virtualName="CalendarDay">
+        <fields>
+          <generalXpObjectHasFields Id="5b77ce18-7976-4e14-9398-0880ea0a1ebd">
+            <field Id="9618c365-85fc-496b-8575-1bf0e0a1011d" name="Date" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="60d01aba-33eb-4467-a501-a5a4bd2768ee">
+            <field Id="acfb6e8d-8a48-4037-af61-9d6a672a6fd8" name="DayOfWeek" virtualColumnType="System.DayOfWeek" logicalType="System.DayOfWeek" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="e9efe605-dc8e-4592-ba57-ca66828522e6">
+            <field Id="8685bd74-7823-4052-b8e9-a4faf78dd50f" name="Day" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="8d5c7c84-478c-42b2-b54c-09affef72098">
+            <field Id="4b2459db-ad20-419c-8840-b06b1e288915" name="Year" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2cdd204d-f95c-4252-ad91-f43e1f52d178">
+            <field Id="2d7566cd-1845-4952-b42d-423ee9383a08" name="Weekend" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="5b1aeee5-e8fe-415c-9221-94b0a5ff4e49">
+            <collectionField Id="ef470963-5963-4b04-996d-1de991c98a9a" name="Calendars" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="e8dd3422-6c4f-4175-bb75-358e7d25f401">
+      <xpObject Id="10e16963-978c-48e3-a4ab-8c602fd7f4b8" name="NPInvalidateCard" baseClass="XPObject" userFileName="NPInvalidateCard" designerFileName="NPInvalidateCard.Designer" className="NPInvalidateCard" nonPersistent="true" virtualName="NPInvalidateCard">
+        <fields>
+          <generalXpObjectHasFields Id="db5d47aa-9e94-444c-bbe3-ef30b945da62">
+            <field Id="81255a4b-2ca9-494f-88d0-6cf9483c5a38" name="CurrentBalance" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" customAttributes="DevExpress.ExpressApp.Model.ModelDefault(&quot;AllowEdit&quot;, &quot;False&quot;)" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="29156e9e-7758-4649-9998-d059bdbd6015">
+            <field Id="12ecd58c-9816-4efc-a09f-6d39c6d2e083" name="DepositAmount" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="5d5ac5aa-a690-4577-aba3-bbc5d32be508">
+            <field Id="22d69ebd-e49c-41f9-9947-5ced8cfa7b69" name="RefundAmount" columnType="Decimal" virtualColumnType="Decimal" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="1704c33c-e0b1-44e6-9989-4c488bb77b2a">
+      <xpObject Id="2bf9e1da-5ab1-4926-a0e4-45c6d2643187" name="Location" baseClass="XPObject" userFileName="Location" designerFileName="Location.Designer" className="Location" virtualName="Location">
+        <fields>
+          <generalXpObjectHasFields Id="1e35c7db-e487-4368-9d80-6e54b29c2abc">
+            <field Id="dfe6dc19-7e88-416b-8c89-982653dd6b16" name="Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="b2a1f50a-d999-4d30-8858-50feee874fd8" sourceCollectionName="CustomerLocations" name="CustomerLocationReferencesLocation" targetFieldName="Location">
+            <xpObjectMoniker Id="9d9b37b9-5849-4ba8-badd-c21cdf2f1d5b" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="f949684a-3672-43c7-afb3-5ceb52327cb5">
+            <collectionField Id="e6cb871b-fbc8-48ca-ab79-c5f492ec46e0" name="CustomerLocations" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="d96df5ad-d12e-47ab-8e50-b7be5aa2bcdc">
+      <xpObject Id="d9d1d77f-8218-43fd-9ec2-6c0e9dd3162c" name="Station" baseClass="XPObject" userFileName="Station" designerFileName="Station.Designer" className="Station" deferredDeletion="False" virtualName="Station">
+        <fields>
+          <generalXpObjectHasFields Id="22be7970-0c7b-4d18-baac-71f72b3757c0">
+            <field Id="ba7c7c23-8779-4a14-a8ae-188e73468561" name="Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="019d7967-aed4-4655-9825-74e1cb672fb0">
+            <field Id="b1540335-ab05-473c-acc6-aa5587eacd87" name="Employee" virtualColumnType="Employee" logicalType="Employee" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="574c1521-5899-4668-93e2-b0f2c2841e3d" sourceCollectionName="StationItems" name="StationItemReferencesStation" targetFieldName="Station">
+            <xpObjectMoniker Id="4c264b07-1aeb-49e1-b234-489b47fdff6f" />
+          </simpleAssociation>
+          <simpleAssociation Id="c817f309-32a8-4e57-bf52-2c58c1567870" sourceCollectionName="OrderDetails" name="OrderDetailReferencesStation" targetFieldName="Station">
+            <xpObjectMoniker Id="838a91ff-18e3-4b5a-9dcf-f3b92fc4f70c" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="4758d251-d75f-4c68-a3b8-ae66dc4b03a1">
+            <collectionField Id="d40b7f39-4929-4f52-a8c0-8dd8de9cdfb0" name="StationItems" />
+          </xpObjectHasCollectionFields>
+          <xpObjectHasCollectionFields Id="8f25d658-0725-44ac-a09e-34af038f8ec7">
+            <collectionField Id="a8f06a00-07c0-45f3-8fb3-3030a4fcb1e4" name="OrderDetails" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="28ec2cc3-fac7-458b-bcbe-5d012a238362">
+      <xpObject Id="4c264b07-1aeb-49e1-b234-489b47fdff6f" name="StationItem" baseClass="XPObject" userFileName="StationItem" designerFileName="StationItem.Designer" className="StationItem" deferredDeletion="False" virtualName="StationItem">
+        <fields>
+          <generalXpObjectHasFields Id="14cc97b4-fd4d-4c1c-b290-186115c29e01">
+            <field Id="09b0a78a-01b6-4030-abdf-763f28226b0b" name="Station" columnType="SByte" virtualColumnType="Station" logicalType="Station" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="76647f08-d518-4493-bd09-1f9b9fa99bb5">
+            <field Id="8a177a75-3c1c-40f2-a3b2-b1949378fc75" name="TransactionItem" virtualColumnType="TransactionItem" logicalType="TransactionItem" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="eadadd74-378b-4883-9a7f-35306c14070c">
+            <field Id="d146ede7-4f33-4603-b99f-08ee513d42fd" name="PreparationTime" columnType="Int32" virtualColumnType="Int32" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="f7d9dd3d-a32e-4d71-a209-199e274d3b3d">
+      <xpObject Id="a1de349a-6cad-472c-b06d-b1dd06430f38" name="TransactionItemCategory" baseClass="XPObject" userFileName="TransactionItemCategory" designerFileName="TransactionItemCategory.Designer" className="TransactionItemCategory" virtualName="TransactionItemCategory">
+        <fields>
+          <generalXpObjectHasFields Id="e37b97c1-ae89-492d-95c7-028947bb655c">
+            <field Id="6825082e-a6a3-4def-9c97-60c2b031885d" name="Name" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="6f6fa17d-4ca6-4ed3-8ba4-f16ab8230979">
+            <field Id="d6952dcf-3fde-4e23-87d9-a5c5aa14e60d" name="ImageUrl" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="10e19806-1950-48d9-ad69-5928ce46e225">
+            <field Id="bfac80ec-7ebf-4e23-8894-5f972eae2c3d" name="Icon" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="67cc373f-27b7-4580-ac32-44694c6d50d7">
+            <field Id="245a5e40-4bf9-4144-aaf6-21330038b596" name="Code" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="29fd0949-e0d6-4373-9cce-d410e9a2114e">
+            <field Id="e68600c1-f596-4ba5-baa9-f7c93db8ce3b" name="Order" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="11d1856e-4f65-42c9-8dab-3df30018ecae" sourceCollectionName="TransactionItems" name="TransactionItemReferencesTransactionItemCategory" targetFieldName="Category">
+            <xpObjectMoniker Id="b2faacd3-2ae3-40da-a94c-ea42b83a69b3" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="d4f96095-bb44-48fa-a8f9-5f21ec28584b">
+            <collectionField Id="cb144c83-95e0-46fb-9dc7-1dd2e0e6d154" name="TransactionItems" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="a4da7919-5f38-425c-9df3-eb5986621753">
+      <xpObject Id="67fbf20a-52ff-490b-bd60-bd3b97ab6bad" name="RegistrationRequest" baseClass="XPObject" userFileName="RegistrationRequest" designerFileName="RegistrationRequest.Designer" className="RegistrationRequest" deferredDeletion="False" virtualName="RegistrationRequest">
+        <fields>
+          <generalXpObjectHasFields Id="5a647af7-7e99-4f9b-ae30-137c29a634f9">
+            <field Id="caf49ca4-7f3c-4b94-acef-32f1d4601a37" name="VerificationCode" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="62117098-eb01-47d7-ba23-cc18b84f5a6f">
+            <field Id="d7186409-9d13-4152-abb0-68265f30609d" name="DateSent" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d6d06d0a-73c8-4b30-a75b-a2be0306b787">
+            <field Id="19755a9c-0f2b-4e84-bd68-ba14c67c6dd7" name="IpAddress" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="3ddb35f5-2889-49f4-bc44-303f1723331b">
+            <field Id="e3eed475-6043-47e2-9da9-2104086316ee" name="DateConsumed" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="5d9cc9e0-1909-4bf8-aded-6299d17166c5">
+            <field Id="61bcfb70-5394-4923-8ad0-b825e83fee86" name="Customer" virtualColumnType="Customer" logicalType="Customer" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="741345dd-73aa-4452-a905-3e03f2cad07a">
+      <xpObject Id="9d9b37b9-5849-4ba8-badd-c21cdf2f1d5b" name="LocationCard" baseClass="XPObject" userFileName="LocationCard" designerFileName="LocationCard.Designer" className="LocationCard" virtualName="LocationCard">
+        <fields>
+          <generalXpObjectHasFields Id="f5075c55-2e5f-407b-806c-39da0b268925">
+            <field Id="e4e4d90a-4151-430d-b245-8038df77450a" name="Card" columnType="Char" virtualColumnType="Card" logicalType="Card" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="a41807d6-9547-4060-9645-0121fb2b7c17">
+            <field Id="4f2fe688-7feb-4ca8-bf59-bdb53a5be4fb" name="Location" virtualColumnType="Location" logicalType="Location" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="4b82e090-9eb7-4ae9-990a-b0517232b234">
+            <field Id="09cf771d-ed74-4f35-851b-96407616ef29" name="OpenedAt" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="057fd205-8c98-4c40-b1d1-aab6f2a38ffb">
+            <field Id="f34cf829-9461-4f00-b1ce-308d46249da2" name="ClosedAt" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9721f18f-703c-445c-a8f4-796194330e56">
+            <field Id="4b8fb77a-baec-40b9-9725-c62deee54e7a" name="OpenedBy" virtualColumnType="Employee" logicalType="Employee" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="708e5599-63af-4bd7-95bc-b9aba8b8efd7">
+            <field Id="4881cdad-441a-46d7-9dd8-486bfd08dc03" name="DeviceLogin" columnType="DateTime" virtualColumnType="DeviceLogin" logicalType="DeviceLogin" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+        <saTargets>
+          <simpleAssociation Id="ab02a570-6238-46d5-ab0a-b744679b5991" sourceCollectionName="Orders" name="OrderReferencesLocationCard" targetFieldName="LocationCard">
+            <xpObjectMoniker Id="d3c55eef-2b17-4638-87b9-5f618bc9070f" />
+          </simpleAssociation>
+        </saTargets>
+        <collectionFields>
+          <xpObjectHasCollectionFields Id="7c420323-807a-4979-830b-1dd787a392ca">
+            <collectionField Id="99f25aa2-0915-4f6d-90e8-5d1611925ce3" name="Orders" />
+          </xpObjectHasCollectionFields>
+        </collectionFields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="2c4a9991-e25b-4e0c-be69-daf457e89091">
+      <xpObject Id="daf2c069-f77c-4a0f-b5d1-74098a064e6e" name="NPCustomerMessage" baseClass="XPObject" userFileName="NPCustomerMessage" designerFileName="NPCustomerMessage.Designer" className="NPCustomerMessage" nonPersistent="true" virtualName="NPCustomerMessage">
+        <fields>
+          <generalXpObjectHasFields Id="d63032ca-f21e-4152-ac65-54861fe6f48d">
+            <field Id="0c06f3aa-ff5c-476a-b28f-81fcac455486" name="Header" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="d1d69ed7-94c6-4850-8af5-50f0b863c21d">
+            <field Id="70d6d53f-0f06-4858-951f-3d00efac606e" name="Message" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="fffbfd5b-289c-419a-a8c3-4f6395cf2132">
+      <xpObject Id="d48dd812-4a24-4b70-83b1-c96cbec3ad78" name="ItemPermission" baseClass="XPObject" userFileName="ItemPermission" designerFileName="ItemPermission.Designer" className="ItemPermission" virtualName="ItemPermission">
+        <fields>
+          <generalXpObjectHasFields Id="af16c0d6-2a82-4470-8f3a-cd09683ebded">
+            <field Id="dca094e2-b7e2-4fe3-bc20-4cf5d9e706be" name="Customer" virtualColumnType="Customer" logicalType="Customer" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="f4dd9f1a-ec7f-4537-9da4-ff76a3279936">
+            <field Id="3ab93852-5f91-4a5a-a936-387f87e5b1ce" name="TransactionItem" virtualColumnType="TransactionItem" logicalType="TransactionItem" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="2d77d8db-16a4-49a3-b58f-bb9bc2a4ca68">
+            <field Id="a40b3ffa-e93b-4835-843a-43a2fc28809f" name="Permission" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" isNullable="true" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="23813be7-f6f4-4344-8aed-7391cadf911d">
+            <field Id="bf6d2c64-3fe6-4b98-8282-c202c909cfd1" name="Active" columnType="Boolean" virtualColumnType="Boolean" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+    <dataBaseObjectModelHasClasses Id="c849b9b0-54e2-40df-b353-7b7e34e02954">
+      <xpObject Id="d10809a3-f42e-4f1b-aec8-6602a4822a93" name="Message" baseClass="XPObject" userFileName="Message" designerFileName="Message.Designer" className="Message" virtualName="Message">
+        <fields>
+          <generalXpObjectHasFields Id="848c60cc-e0f3-445d-9fdf-c3f83454b246">
+            <field Id="2c3a3623-3a73-4478-8ff0-2c4783cc0b3d" name="Date" columnType="DateTime" virtualColumnType="DateTime" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="7ed73700-7486-4fd1-878c-8bf6628c5b28">
+            <field Id="e147bb06-c0a6-4e3a-9d19-e8d9ac70e1a5" name="To" virtualColumnType="Customer" logicalType="Customer" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="9558ea41-e793-4bbd-b343-92e05981187f">
+            <field Id="c26d5ce4-0e8d-4ffb-a8ca-31a106afb1fe" name="Title" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+          <generalXpObjectHasFields Id="09258f2c-8f59-46e7-b6ab-8dedc201734b">
+            <field Id="90d8eb69-533a-46f3-8b3d-f8c8b36cf438" name="Content" virtualColumnType="String" delayedUpdateModifiedOnly="false" />
+          </generalXpObjectHasFields>
+        </fields>
+      </xpObject>
+    </dataBaseObjectModelHasClasses>
+  </classes>
+  <externalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="41026d53-d5c6-465a-a8da-1a376cb7db8f">
+      <externalType Id="30744625-f9df-478e-9b34-4d6d487d498a" name="EProductType" namespace="Epay3.Module.BusinessObjects" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="8053388f-48e0-403d-a9dc-39e14ef1313e">
+      <externalType Id="dc023bb7-a276-467b-87eb-ea7267f12131" name="EOrderStatus" namespace="Epay3.Module.BusinessObjects" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="70205e74-7fdc-4f66-9d24-69cf0e525398">
+      <externalType Id="7b061701-d7c8-4861-9c31-ca1a2a4ad658" name="ETransactionType" namespace="Epay3.Module.BusinessObjects" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="0d8a08d0-9d52-48e7-9567-c9a73979fc35">
+      <externalType Id="85d6e43c-5b6e-4375-a715-27048151012d" name="EDeviceMode" namespace="Epay3.Module.BusinessObjects" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="8f1d8f25-c24a-4765-b329-356690ee838b">
+      <externalType Id="ba4e1e6e-8964-4a96-b1eb-9fc862465097" name="DayOfWeek" namespace="System" />
+    </dataBaseObjectModelHasExternalTypes>
+    <dataBaseObjectModelHasExternalTypes Id="4a58397d-0dab-428b-8098-6fa865792f07">
+      <externalType Id="9071db92-fade-4927-b69e-6f7346abcea6" name="EOrderType" namespace="Epay3.Module.BusinessObjects" />
+    </dataBaseObjectModelHasExternalTypes>
+  </externalTypes>
+</dataBaseObjectModel>

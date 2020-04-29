@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="Epay3" Logo="epaylogo">
+  <BOModel>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Bill" ImageName="" />
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Card" ImageName="BO_Contact" />
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Customer" ImageName="BO_Customer" />
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Device" ImageName="" />
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.DeviceLogin">
+      <OwnMembers>
+        <Member Name="Date" EditMask="g" DisplayFormat="{0:g}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.DeviceRegistration">
+      <OwnMembers>
+        <Member Name="Date" EditMask="g" DisplayFormat="{0:g}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Employee" ImageName="BO_Employee" />
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.LocationCard">
+      <OwnMembers>
+        <Member Name="ClosedAt" DisplayFormat="{0:g}" EditMask="g" />
+        <Member Name="OpenedAt" DisplayFormat="{0:g}" EditMask="g" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Message">
+      <OwnMembers>
+        <Member Name="Date" DisplayFormat="{0:g}" EditMask="g" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.NPCustomerMessage" Caption="Customer Message" />
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Order" ImageName="BO_List">
+      <OwnMembers>
+        <Member Name="Date" DisplayFormat="{0:g}" EditMask="g" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.OrderDetail">
+      <OwnMembers>
+        <Member Name="Quantity" DisplayFormat="{0:0.##}" EditMask="n" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.RegistrationRequest">
+      <OwnMembers>
+        <Member Name="DateConsumed" EditMask="g" DisplayFormat="{0:g}" />
+        <Member Name="DateSent" EditMask="g" DisplayFormat="{0:g}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Transaction" ImageName="BO_Sale">
+      <AppearanceRules>
+        <AppearanceRule Id="@45043efc-d06f-44f2-9db7-5f72c6e82d77" Visibility="Hide" TargetItems="DateEffective" AppearanceItemType="ViewItem" Criteria="IsCancel!=true" IsNewNode="True" />
+      </AppearanceRules>
+      <OwnMembers>
+        <Member Name="Date" EditMaskType="DateTime" EditMask="g" DisplayFormat="{0:g}" />
+        <Member Name="DateEffective" EditMask="g" DisplayFormat="{0:g}" AllowEdit="False" />
+        <Member Name="IsCancel" AllowEdit="False" />
+        <Member Name="ProvisionDate" DisplayFormat="{0:g}" EditMask="g" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.TransactionDetail">
+      <OwnMembers>
+        <Member Name="Quantity" EditMask="n" DisplayFormat="{0:0.##}" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.TransactionItem" ImageName="ModelEditor_Categorized" />
+  </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default" Index="0">
+        <Items>
+          <Item Id="Transaction_ListView" Index="0" />
+          <Item Id="Customer_ListView" Index="1" />
+          <Item Id="Card_ListView" Index="2" />
+        </Items>
+      </Item>
+      <Item Id="Settings" Index="1" />
+      <Item Id="Billing" Index="2" />
+    </Items>
+  </NavigationItems>
+  <Options DataAccessMode="Server">
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SystemModule" Version="19.2.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="Order_ListView">
+      <Columns>
+        <ColumnInfo Id="Date" SortIndex="0" SortOrder="Descending" />
+      </Columns>
+    </ListView>
+    <ListView Id="OrderDetail_ListView">
+      <Columns>
+        <ColumnInfo Id="TransactionDetail" Index="-1" />
+      </Columns>
+    </ListView>
+    <ListView Id="Station_StationItems_ListView" AllowUnlink="False" AllowLink="False" />
+    <ListView Id="Transaction_ListView">
+      <Columns>
+        <ColumnInfo Id="Amount" Index="-1" />
+        <ColumnInfo Id="Device" Index="-1" />
+        <ColumnInfo Id="DeviceLogin" Index="-1" />
+        <ColumnInfo Id="SourceAddress" Index="-1" />
+        <ColumnInfo Id="Date" SortIndex="0" SortOrder="Descending" />
+        <ColumnInfo Id="TotalCharges" Index="1" Width="70" />
+        <ColumnInfo Id="TotalSales" Index="2" Width="65" />
+        <ColumnInfo Id="Card" Index="3" />
+        <ColumnInfo Id="OldBalance" Index="4" />
+        <ColumnInfo Id="NewBalance" Index="5" />
+        <ColumnInfo Id="Employee" Index="6" />
+        <ColumnInfo Id="ProductType" Index="7" />
+      </Columns>
+    </ListView>
+    <ListView Id="TransactionDetail_ListView">
+      <Columns>
+        <ColumnInfo Id="Transaction" Index="-1" />
+        <ColumnInfo Id="ValidFrom" Index="-1" />
+        <ColumnInfo Id="ValidTo" Index="-1" />
+        <ColumnInfo Id="TransactionDate" PropertyName="Transaction.Date" Index="0" SortIndex="0" SortOrder="Descending" IsNewNode="True" />
+        <ColumnInfo Id="Customer" PropertyName="Transaction.Card.Customer.Name" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="Item" Index="2" />
+        <ColumnInfo Id="Quantity" Index="3" />
+        <ColumnInfo Id="Total" Index="4" />
+      </Columns>
+    </ListView>
+    <ListView Id="TransactionItem_TransactionDetails_ListView">
+      <Columns>
+        <ColumnInfo Id="Transaction" Index="-1" />
+        <ColumnInfo Id="ValidFrom" Index="-1" />
+        <ColumnInfo Id="ValidTo" Index="-1" />
+        <ColumnInfo Id="TransactionDate" PropertyName="Transaction.Date" Index="0" SortIndex="0" SortOrder="Descending" Width="139" IsNewNode="True" />
+        <ColumnInfo Id="CustomerName" PropertyName="Transaction.Card.Customer.Name" Index="1" IsNewNode="True" />
+        <ColumnInfo Id="Quantity" Index="2" />
+        <ColumnInfo Id="Total" Index="3" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

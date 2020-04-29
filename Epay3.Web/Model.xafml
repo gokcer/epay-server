@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <BOModel>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Transaction">
+      <AppearanceRules>
+        <AppearanceRule Id="@fa2a195a-41ed-4ac1-9e0d-fcb3c1a2cf81" FontColor="Red" Criteria="[IsCancel] = True" TargetItems="*" Context="ListView" IsNewNode="True" />
+      </AppearanceRules>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.TransactionDetail">
+      <AppearanceRules>
+        <AppearanceRule Id="@80fb08da-5ca6-4156-a4f4-daf042ce1b83" FontColor="Red" Context="ListView" TargetItems="*" Criteria="[IsCancel] = True" IsNewNode="True" />
+      </AppearanceRules>
+    </Class>
+  </BOModel>
+  <SchemaModules>
+    <SchemaModule Name="SystemAspNetModule" Version="19.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="19.2.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <ListView Id="CalendarDay_ListView" DataAccessMode="Client" />
+    <ListView Id="Customer_ListView" DataAccessMode="Client" />
+    <ListView Id="Transaction_ListView" IsAdaptive="True">
+      <Columns>
+        <ColumnInfo Id="Date" Index="0" />
+        <ColumnInfo Id="TotalCharges" Index="1" />
+        <ColumnInfo Id="TotalSales" Index="2" />
+        <ColumnInfo Id="Card" Index="3" />
+        <ColumnInfo Id="OldBalance" Index="4" />
+        <ColumnInfo Id="NewBalance" Index="5" />
+        <ColumnInfo Id="Employee" Index="6" />
+        <ColumnInfo Id="ProductType" Index="7" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

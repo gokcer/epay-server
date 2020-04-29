@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign Id="ActionDesign">
+    <Actions Id="Actions">
+      <Action Id="deb19675-4621-4c28-a36c-072666264161" Caption="Link Gönder" />
+    </Actions>
+  </ActionDesign>
+</Application>

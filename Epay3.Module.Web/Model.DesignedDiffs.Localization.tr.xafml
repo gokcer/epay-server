@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <ActionDesign>
+    <Actions>
+      <Action Id="Export" Caption="Dışa Aktar" />
+      <Action Id="ExportDashboard" Caption="Dışa Aktar" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="Epay3.Module.BusinessObjects.MyLogonParameters">
+      <OwnMembers>
+        <Member Name="Client" Caption="Müşteri Kodu" />
+      </OwnMembers>
+    </Class>
+  </BOModel>
+  <Localization>
+    <LocalizationGroup Name="Captions">
+      <LocalizationItem Name="MyAccount" Value="Hesabım" />
+    </LocalizationGroup>
+  </Localization>
+  <Views>
+    <DetailView Id="MyLogonParameters_DetailView">
+      <Items>
+        <PropertyEditor Id="Password" Caption="Parola" />
+        <PropertyEditor Id="UserName" Caption="Kullanıcı Adı" />
+      </Items>
+    </DetailView>
+    <ListView Id="MyLogonParameters_ListView">
+      <Columns>
+        <ColumnInfo Id="Password" Caption="Parola" />
+        <ColumnInfo Id="UserName" Caption="Kullanıcı Adı" />
+      </Columns>
+    </ListView>
+    <ListView Id="MyLogonParameters_LookupListView">
+      <Columns>
+        <ColumnInfo Id="Password" Caption="Parola" />
+        <ColumnInfo Id="UserName" Caption="Kullanıcı Adı" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>

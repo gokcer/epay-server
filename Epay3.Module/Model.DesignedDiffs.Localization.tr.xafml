@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="NFC Pay">
+  <ActionDesign>
+    <Actions>
+      <Action Id="4fc4c8b2-6da5-401b-9fca-25f0959edce4" Caption="Yükleme Yap" />
+      <Action Id="57f25104-3515-4ea2-a3e8-a12f231283bc" Caption="Mesaj Yolla" />
+      <Action Id="623481bc-2be4-4481-9a7b-795ea86b76f0" Caption="İptal Et" />
+      <Action Id="83de2223-c6c5-4fde-bf2e-6e36bbbbb86c" Caption="Yıl Oluştur" />
+      <Action Id="957490b1-0fd8-488c-90a4-1f9e4921a9e2" Caption="İşlem İptal Et" />
+      <Action Id="d4d4ce65-5c82-4060-912f-0e8665a13c5c" Caption="Kartı Geçersiz Kıl" />
+      <Action Id="Logoff" Caption="Çıkış" />
+      <Action Id="Logon" Caption="Giriş" />
+      <Action Id="New" Caption="Yeni" />
+      <Action Id="Refresh" Caption="Yenile" />
+      <Action Id="Save" Caption="Kaydet" />
+      <Action Id="SaveAndClose" Caption="Kaydet Kapat" />
+      <Action Id="SaveAndNew" Caption="Kaydet Yeni" />
+    </Actions>
+  </ActionDesign>
+  <BOModel>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Bill" Caption="Fatura">
+      <OwnMembers>
+        <Member Name="Amount" Caption="Miktar" />
+        <Member Name="DueDate" Caption="Geçerlilik Tarihi" />
+        <Member Name="Month" Caption="Ay" />
+        <Member Name="PaymentDate" Caption="Ödeme Tarihi" />
+        <Member Name="Year" Caption="Yıl" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Calendar" Caption="Takvim">
+      <OwnMembers>
+        <Member Name="Active" Caption="Aktif" />
+        <Member Name="CalendarDays" Caption="Takvim Günleri" />
+        <Member Name="Name" Caption="Ad" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.CalendarDay" Caption="Takvim Günü">
+      <OwnMembers>
+        <Member Name="Calendars" Caption="Takvimler" />
+        <Member Name="Date" Caption="Tarih" />
+        <Member Name="Day" Caption="Gün" />
+        <Member Name="DayOfWeek" Caption="Haftanın Günü" />
+        <Member Name="Weekend" Caption="Haftasonu" />
+        <Member Name="Year" Caption="Yıl" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Card" Caption="Kart">
+      <OwnMembers>
+        <Member Name="Active" Caption="Aktif" />
+        <Member Name="CardNo" Caption="Kart No" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="LocationCards" Caption="Konum Kartları" />
+        <Member Name="MinimumBalanceLimit" Caption="Minimum Bakiye Limiti" />
+        <Member Name="Transactions" Caption="İşlemler" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Customer" Caption="Müşteri">
+      <OwnMembers>
+        <Member Name="Cards" Caption="Kartlar" />
+        <Member Name="CitizenshipNumber" Caption="Vatandaşlık Numarası" />
+        <Member Name="Email" Caption="Eposta" />
+        <Member Name="Name" Caption="Ad" />
+        <Member Name="Orders" Caption="Siparişler" />
+        <Member Name="Password" Caption="Parola" />
+        <Member Name="Phone" Caption="Telefon" />
+        <Member Name="RegistrationRequests" Caption="Kayıt Talepleri" />
+        <Member Name="Team" Caption="Takım" />
+        <Member Name="UserName" Caption="Kullanıcı Adı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Device" Caption="Cihaz">
+      <OwnMembers>
+        <Member Name="DeviceLogins" Caption="Cihaz Giriş Kaydı" />
+        <Member Name="DeviceMode" Caption="Çalışma Modu" />
+        <Member Name="DeviceToken" Caption="Cihaz Jetonu" />
+        <Member Name="ProductType" Caption="Ürün Tipi" />
+        <Member Name="Serial" Caption="Seri No" />
+        <Member Name="Transactions" Caption="İşlemler" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.DeviceLogin" Caption="Cihaz Giriş Kaydı">
+      <OwnMembers>
+        <Member Name="Date" Caption="Tarih" />
+        <Member Name="Device" Caption="Cihaz" />
+        <Member Name="Employee" Caption="Personel" />
+        <Member Name="Serial" Caption="Seri No" />
+        <Member Name="SourceAddress" Caption="Kaynak Adres" />
+        <Member Name="Success" Caption="Başarılı" />
+        <Member Name="Transactions" Caption="İşlemler" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.DeviceRegistration" Caption="Cihaz Kayıt">
+      <OwnMembers>
+        <Member Name="Date" Caption="Tarih" />
+        <Member Name="Serial" Caption="Seri No" />
+        <Member Name="SourceAddress" Caption="Kaynak Adres" />
+        <Member Name="Success" Caption="Başarılı" />
+        <Member Name="Token" Caption="Jeton" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Employee" Caption="Personel">
+      <OwnMembers>
+        <Member Name="Active" Caption="Aktif" />
+        <Member Name="CanCancelOrder" Caption="Sipariş İptal Edebilir" />
+        <Member Name="CanCharge" Caption="Para Yükleyebilir" />
+        <Member Name="CanCompleteOrder" Caption="Sipariş Tamamlayabilir" />
+        <Member Name="CanManageTable" Caption="Masa Yönetebilir" />
+        <Member Name="CanResetOrder" Caption="Sipariş Sıfırlayabilir" />
+        <Member Name="CanSale" Caption="Satış Yapabilir" />
+        <Member Name="CanStartOrder" Caption="Siparişi Başlatabilir" />
+        <Member Name="DeviceLogins" Caption="Cihaz Giriş Kaydı" />
+        <Member Name="Transactions" Caption="İşlemler" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.ItemPermission" Caption="Ürün İzin">
+      <OwnMembers>
+        <Member Name="Active" Caption="Aktif" />
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="Permission" Caption="İzin" />
+        <Member Name="TransactionItem" Caption="Ürün" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Location" Caption="Konum">
+      <OwnMembers>
+        <Member Name="CustomerLocations" Caption="Müşteri Konumları" />
+        <Member Name="Name" Caption="Ad" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.LocationCard" Caption="Konum Kartı">
+      <OwnMembers>
+        <Member Name="Card" Caption="Kart" />
+        <Member Name="ClosedAt" Caption="Kapanma Zamanı" />
+        <Member Name="Location" Caption="Konum" />
+        <Member Name="OpenedAt" Caption="Açılma Zamanı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Message" Caption="Mesaj">
+      <OwnMembers>
+        <Member Name="Content" Caption="İçerik" />
+        <Member Name="Date" Caption="Tarih" />
+        <Member Name="Title" Caption="Başlık" />
+        <Member Name="To" Caption="Alıcı" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.NPCustomerMessage" Caption="Müşteri Mesajı">
+      <OwnMembers>
+        <Member Name="Header" Caption="Başlık" />
+        <Member Name="Message" Caption="Mesaj" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.NPNewCharge" Caption="Yeni Yükleme">
+      <OwnMembers>
+        <Member Name="End" Caption="Son" />
+        <Member Name="Item" Caption="Nesne" />
+        <Member Name="Quantity" Caption="Miktar" />
+        <Member Name="Start" Caption="Başlangıç" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.NPNewDailyCharge" Caption="Yeni Günlük Yükleme">
+      <OwnMembers>
+        <Member Name="Calendar" Caption="Takvim" />
+        <Member Name="Item" Caption="Nesne" />
+        <Member Name="Quantity" Caption="Miktar" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Order" Caption="Sipariş">
+      <OwnMembers>
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="Date" Caption="Tarih" />
+        <Member Name="OrderDetails" Caption="Sipariş Detayları" />
+        <Member Name="Status" Caption="Durum" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.OrderDetail" Caption="Sipariş Detay">
+      <OwnMembers>
+        <Member Name="Order" Caption="Sipariş" />
+        <Member Name="Quantity" Caption="Miktar" />
+        <Member Name="Station" Caption="İstasyon" />
+        <Member Name="Status" Caption="Durum" />
+        <Member Name="TransactionDetail" Caption="İşlem Detayı" />
+        <Member Name="TransactionItem" Caption="Ürün" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.RegistrationRequest" Caption="Kayıt Talebi">
+      <OwnMembers>
+        <Member Name="Customer" Caption="Müşteri" />
+        <Member Name="DateConsumed" Caption="Kullanıldıği Tarih" />
+        <Member Name="DateSent" Caption="Gönderim Tarihi" />
+        <Member Name="IpAddress" Caption="Ip Adresi" />
+        <Member Name="VerificationCode" Caption="Doğrulama Kodu" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Site">
+      <OwnMembers>
+        <Member Name="CustomerProvisionTime" Caption="Müşteri Provizyon Süresi" />
+        <Member Name="Latitude" Caption="Enlem" />
+        <Member Name="Longitude" Caption="Boylam" />
+        <Member Name="MinimumBalanceLimit" Caption="Mimimum Bakiye Tutarı" />
+        <Member Name="Name" Caption="Ad" />
+        <Member Name="NotifyCustomerForTransaction" Caption="Müşterilere İşlem Bildirimi" />
+        <Member Name="OrderCooldownTime" Caption="Yeni Sipariş Bekleme Süresi" />
+        <Member Name="RegistrationCode" Caption="Kayıt Kodu" />
+        <Member Name="Timezone" Caption="Saat Dilimi" />
+        <Member Name="TransactionFee" Caption="İşlem Ücreti" />
+        <Member Name="TransactionMonthlyLimit" Caption="Aylık İşlem Limiti" />
+        <Member Name="WaitressProvisionTime" Caption="Garson Provizyon Süresi" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Station" Caption="İstasyon">
+      <OwnMembers>
+        <Member Name="Employee" Caption="Personel" />
+        <Member Name="Name" Caption="Ad" />
+        <Member Name="OrderDetails" Caption="Siparişler" />
+        <Member Name="StationItems" Caption="İstasyon Ürünleri" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.StationItem" Caption="İstasyon Ürünü">
+      <OwnMembers>
+        <Member Name="PreparationTime" Caption="Hazırlanma Süresi" />
+        <Member Name="Station" Caption="İstasyon" />
+        <Member Name="TransactionItem" Caption="Ürün" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.Transaction" Caption="İşlem">
+      <OwnMembers>
+        <Member Name="Amount" Caption="Miktar" />
+        <Member Name="Card" Caption="Kart" />
+        <Member Name="Date" Caption="Tarih" />
+        <Member Name="DateEffective" Caption="Etki Tarihi" />
+        <Member Name="Device" Caption="Cihaz" />
+        <Member Name="DeviceLogin" Caption="Cihaz Giriş Kaydı" />
+        <Member Name="Employee" Caption="Personel" />
+        <Member Name="IsCancel" Caption="İptal Kaydı" />
+        <Member Name="NewBalance" Caption="Yeni Bakiye" />
+        <Member Name="OldBalance" Caption="Eski Bakiye" />
+        <Member Name="ProductType" Caption="Ürün Tipi" />
+        <Member Name="ProvisionDate" Caption="Provizyon Tarihi" />
+        <Member Name="SourceAddress" Caption="Kaynak Adres" />
+        <Member Name="TotalCharges" Caption="Toplam Yükleme" />
+        <Member Name="TotalSales" Caption="Toplam Satış" />
+        <Member Name="TransactionDetails" Caption="İşlem Detayları" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.TransactionDetail" Caption="İşlem Detayı">
+      <OwnMembers>
+        <Member Name="IsCancel" Caption="İptal Kaydı" />
+        <Member Name="Item" Caption="Nesne" />
+        <Member Name="Quantity" Caption="Miktar" />
+        <Member Name="Total" Caption="Toplam" />
+        <Member Name="Transaction" Caption="İşlem" />
+        <Member Name="ValidFrom" Caption="Geçerlilik Başlangıcı" />
+        <Member Name="ValidTo" Caption="Geçerlilik Bitişi" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.TransactionItem" Caption="Ürün">
+      <OwnMembers>
+        <Member Name="Active" Caption="Aktif" />
+        <Member Name="Category" Caption="Kategori" />
+        <Member Name="Image" Caption="Resim" />
+        <Member Name="Name" Caption="Ad" />
+        <Member Name="OrderDetails" Caption="Sipariş Detayları" />
+        <Member Name="Price" Caption="Fiyat" />
+        <Member Name="ProductType" Caption="Ürün Tipi" />
+        <Member Name="SpecialCode" Caption="Özel Kod" />
+        <Member Name="System" Caption="Sistem" />
+        <Member Name="TransactionDetails" Caption="İşlem Detayları" />
+        <Member Name="Type" Caption="Tip" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.EpayDataModel.TransactionItemCategory" Caption="Ürün Kategorisi">
+      <OwnMembers>
+        <Member Name="Code" Caption="Kod" />
+        <Member Name="Icon" Caption="İkon" />
+        <Member Name="ImageUrl" Caption="Resim URL" />
+        <Member Name="Name" Caption="Ad" />
+        <Member Name="Order" Caption="Sıra No" />
+        <Member Name="TransactionItems" Caption="Ürünler" />
+      </OwnMembers>
+    </Class>
+    <Class Name="Epay3.Module.BusinessObjects.MyLogonParameters" Caption="NFC Pay Giriş" />
+  </BOModel>
+  <CreatableItems>
+    <CreatableItem ClassName="Epay3.Module.BusinessObjects.EpayDataModel.RegistrationRequest" Caption="Kayıt Talebi" />
+  </CreatableItems>
+  <Localization>
+    <LocalizationGroup Name="Enums">
+      <LocalizationGroup Name="Epay3.Module.BusinessObjects.EDeviceMode">
+        <LocalizationItem Name="Canteen" Value="Kantin" />
+        <LocalizationItem Name="Ticket" Value="Bilet" />
+        <LocalizationItem Name="Waitress" Value="Garson" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Epay3.Module.BusinessObjects.EOrderStatus">
+        <LocalizationItem Name="Canceled" Value="İptal" />
+        <LocalizationItem Name="Completed" Value="Tamamlandı" />
+        <LocalizationItem Name="New" Value="Yeni" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Epay3.Module.BusinessObjects.EProductType">
+        <LocalizationItem Name="Money" Value="Para" />
+        <LocalizationItem Name="Ticket" Value="Bilet" />
+      </LocalizationGroup>
+      <LocalizationGroup Name="Epay3.Module.BusinessObjects.ETransactionType">
+        <LocalizationItem Name="Charge" Value="Yükleme" />
+        <LocalizationItem Name="Withdraw" Value="Satış" />
+      </LocalizationGroup>
+    </LocalizationGroup>
+  </Localization>
+  <NavigationItems>
+    <Items>
+      <Item Id="Default" Caption="Genel" />
+      <Item Id="Settings" Caption="Ayarlar" />
+      <Item Id="Billing" Caption="Fatura" />
+      <Item Id="Reports" Caption="Raporlar">
+        <Items>
+          <Item Id="Analysis_ListView" Caption="Analiz" />
+          <Item Id="Dashboards" Caption="Dashboard" />
+          <Item Id="ReportsV2" Caption="Raporlar" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Validation>
+    <Contexts>
+      <ValidationContext Id="Save" Caption="Kaydet Kapat" />
+    </Contexts>
+  </Validation>
+  <Views>
+    <DetailView Id="Customer_DetailView">
+      <Items>
+        <PropertyEditor Id="RegistrationRequests" Caption="Kayıt Talepleri" />
+      </Items>
+    </DetailView>
+    <ListView Id="Customer_RegistrationRequests_ListView">
+      <Columns>
+        <ColumnInfo Id="Customer" Caption="Müşteri" />
+        <ColumnInfo Id="VerificationCode" Caption="Doğrulama Kodu" />
+        <ColumnInfo Id="DateSent" Caption="Gönderim Tarihi" />
+        <ColumnInfo Id="IpAddress" Caption="Ip Adresi" />
+        <ColumnInfo Id="DateConsumed" Caption="Kullanıldıği Tarih" />
+      </Columns>
+    </ListView>
+    <DetailView Id="RegistrationRequest_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="RegistrationRequest" Caption="Kayıt Talebi" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DetailView Id="Station_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <LayoutGroup Id="Station" Caption="İstasyon" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
+</Application>
